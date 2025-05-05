@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bite ME! Kiosk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Menu -->
+    <div class="menu-section">
+      <header class="menu-header">
+        <img src="logo.png" alt="Bite ME!" class="logo">
+        <h2>Hey, what's up?</h2>
+      </header>
+
+      <div class="categories" id="categories"></div>
+
+      <h3>Popular</h3>
+      <div class="popular-items" id="popular-items"></div>
+    </div>
+
+    <!-- Pop-up Modal for Item -->
+  <div class="modal" id="item-modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">×</button>
+      <img id="modal-img" src="" alt="Item" class="modal-img">
+      <h2 id="modal-name"></h2>
+      <p id="modal-description"></p> 
+      <p id="modal-price"></p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQty()">-</button>
+        <span id="quantity">1</span>
+        <button onclick="increaseQty()">+</button>
+      </div>
+      <button class="add-btn" onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Pop-up Modal for Combo Meals -->
+  <div class="modal" id="combo-modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeComboModal()">×</button>
+      <h2>Menu</h2>
+      <div id="combo-menu-items"></div>
+    </div>
+  </div>
+
+    <!-- Right Cart -->
+    <div class="cart-section">
+      <h3>My Order</h3>
+      <div id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total" id="cart-total">Total: ₱0.00</div>
+        <button class="checkout-btn" onclick="checkout()">Done</button>
+      </div>
+    </div>
+  </div>
+
+  
+
+    <!-- Payment Method Modal -->
+    <div class="modal" id="payment-modal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closePaymentModal()">×</button>
+        <h2>Select Payment Method</h2>
+        <div class="options">
+          <div class="option-card" onclick="selectPaymentMethod('GCash')">
+            <img src="gcash.png" alt="GCash" class="icon">
+            <p>GCash</p>
+          </div>
+          <div class="option-card" onclick="selectPaymentMethod('Bank')">
+            <img src="bank.jpg" alt="Bank Transfer" class="icon">
+            <p>Bank Transfer</p>
+          </div>
+          <div class="option-card" onclick="selectPaymentMethod('Cash')">
+            <img src="cash.png" alt="Cash" class="icon">
+            <p>Cash</p>
+          </div>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Receipt Modal -->
+    <div class="modal" id="receipt-modal">
+        <div class="modal-content">
+        <button class="close-btn" onclick="closeReceiptModal()">×</button>
+        <h2>Receipt</h2>
+        <div id="receipt-content"></div>
+        </div>
+    </div>
+    
+</div>  
+<script src="script.js"></script>
+</body>
+</html>

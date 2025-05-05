@@ -1,0 +1,249 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    height: 100%;
+  }
+
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+
+  /* Left side */
+  .menu-section {
+    flex: 2;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .menu-header {
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .categories, .popular-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .category-card, .popular-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .category-card:hover, .popular-card:hover {
+    background: #ffe0b2;
+  }
+
+  /* Right side */
+  .cart-section {
+    flex: 1;
+    background: #fafafa;
+    padding: 20px;
+    border-left: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #cart-items {
+    margin-top: 20px;
+  }
+
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .cart-footer {
+    margin-top: auto;
+  }
+
+  .cart-total {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background: #385368;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .modal-img {
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .quantity-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+  }
+
+  .quantity-selector button {
+    background: #57cc99;
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 10px;
+  }
+
+  .add-btn {
+    background: #385368;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+    #modal-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+    #combo-menu-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+  max-height: 400px; 
+  overflow-y: auto; 
+}
+
+
+.combo-item-card {
+    background: transparent;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  .combo-item-card img {
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .combo-item-card button {
+    margin-top: 10px;
+    background: #385368;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  /* Payment Modal */
+#payment-modal .modal-content {
+  width: 400px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.option-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.option-card:hover {
+  background: #ffe0b2;
+  transform: scale(1.1);
+}
+
+
+.icon {
+width: 50px;  
+height: auto;
+margin-bottom: 10px;
+}
+
+.receipt {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.receipt h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.receipt ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.receipt ul li {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.receipt p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
